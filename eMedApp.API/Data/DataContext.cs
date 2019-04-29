@@ -1,4 +1,4 @@
-using eMedApp.API.Model;
+using eMedApp.API.Model.User;
 using Microsoft.EntityFrameworkCore;
 
 namespace eMedApp.API.Data

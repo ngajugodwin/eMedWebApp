@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using eMedApp.API.Data;
-using eMedApp.API.Model;
+using eMedApp.API.Model.User;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,7 +20,6 @@ namespace eMedApp.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
-            var test = "Hello";
             var users = await _context.Users.ToListAsync();
             return Ok(users);
         }
