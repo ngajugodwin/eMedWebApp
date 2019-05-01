@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System;
 using System.Linq.Expressions;
 using System.Text;
@@ -76,7 +77,7 @@ namespace eMedApp.API.Controllers
             return Ok(new {
                 token = tokenHandler.WriteToken(token)
             });
-        }
-
+        }          
+        
     }
 }

@@ -1,0 +1,16 @@
+.container {
+    width: 70%;
+    margin-right: 50px;
+    margin-top: 70px;
+    max-width: 1200;
+}
+
+.main {
+    margin-right: 50%;
+    margin-left: 20%;
+}
+
+.form-group button {
+    text-align: center;
+    width: -webkit-fill-available;
+}

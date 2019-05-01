@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div class="container">
+       <div class="main">
+         <form #loginForm="ngForm" (ngSubmit)="login()" *ngIf="!loggedIn()">
+           <h2>Login Form</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username" required [(ngModel)]="model.username">
+            </div>
+            
+             <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" required [(ngModel)]="model.password">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-success" type="submit" [disabled]="!loginForm.valid">Login</button>
+            </div>
+         </form>
+       </div>
+    </div>
+    
+
+  </body>
+
+</html>
