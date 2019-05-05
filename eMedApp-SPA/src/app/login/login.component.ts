@@ -1,3 +1,4 @@
+import { AlertifyService } from './../_services/alertify/alertify.service';
 import { AuthService } from './../_services/auth/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router,
+    private alertify: AlertifyService) { }
   model: any = {};
 
   ngOnInit() {
@@ -17,9 +19,9 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.authService.login(this.model).subscribe(response => {
-        console.log('Logged In Successfully');
+        this.alertify.success('Logged In Successfully');
     }, error => {
-      console.log(error);
+      this.alertify.error('Invalid username or password');
     }, () => {
       this.router.navigate(['/dashboard']);
     });
@@ -30,11 +32,4 @@ export class LoginComponent implements OnInit {
     return !!token;
       // if token is available return true, else return false
   }
-
-  logOut() {
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
-    console.log('Logged out successfully');
-  }
-
 }

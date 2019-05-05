@@ -7,16 +7,20 @@ import { FormsModule } from '@angular/forms';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 
+/**Guards to protect links */
+import { AuthGuard } from './_guards/auth.guard';
+
 /**Components Section */
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './dashboard/nav/nav.component';
+import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 
 /**Services Section */
 import { AuthService } from './_services/auth/auth.service';
-import { AuthGuard } from './_guards/auth.guard';
+import { AlertifyService } from './_services/alertify/alertify.service';
 
 @NgModule({
    declarations: [
@@ -24,7 +28,8 @@ import { AuthGuard } from './_guards/auth.guard';
       UserComponent,
       LoginComponent,
       DashboardComponent,
-      NavComponent
+      NavComponent,
+      SidebarComponent
    ],
    imports: [
       BrowserModule,
@@ -34,7 +39,8 @@ import { AuthGuard } from './_guards/auth.guard';
    ],
    providers: [
       AuthService,
-      AuthGuard
+      AuthGuard,
+      AlertifyService
    ],
    bootstrap: [
       AppComponent

@@ -1,0 +1,65 @@
+.container-fluid { 
+    margin-top: 3.53rem;
+    margin-left: -1rem; 
+}
+
+.sidebar { 
+    background: #2A3F54; 
+    color: #fff;
+    width: 70%; 
+    height: 90.75vh !important;
+}
+
+.sidebar-heading {
+    padding: 1rem;
+    display: flex;
+}
+
+.sidebar-heading-name {
+    font-size: 1.5rem;
+}
+
+.sidebar-welcome-box {
+    margin: 1rem;
+    display: flex;
+}
+
+.sidebar-welcome-img-box {
+    position: relative;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    width: 3.5rem;
+    height: 4rem;
+}
+
+.sidebar-welcome-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.menu { 
+    list-style: none; 
+    padding: 0;
+    border-top: 1px solid grey; 
+}
+
+.menu__list { 
+    padding: .5rem 1rem; 
+    cursor: pointer;
+}
+
+.menu__list:hover {
+    background: rgba(255,255,255,.05);
+}
+
+.menu__list--item { 
+    color: #fff; 
+}
+
+.menu__list--item:hover { text-decoration: none; }
